@@ -3,8 +3,8 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import fruitdetection from "@/public/fruitdetection.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import predictivemaintenance from "@/public/predictivemaintenance.png";
+import VCA from "@/public/VCA.png";
 
 export const links = [
   {
@@ -67,7 +67,7 @@ export const projectsData = [
     description:
       "B2B car leasing portal using Jakarta EE, .NET, React & Spring Boot with Microservices and Docker.",
     tags: ["Spring Boot", "React", "Node.js", "Docker", "MySQL"],
-    imageUrl: fruitdetection,
+    imageUrl: VCA,
     link: "https://github.com/ankur-mali/PG-DAC",
   },
   {
@@ -75,7 +75,7 @@ export const projectsData = [
     description:
       "AeroEngine health monitoring using Streamlit and AI, built with CMAPSS dataset for RUL prediction.",
     tags: ["Python", "Streamlit", "AI", "Random Forest", "CMAPSS"],
-    imageUrl: fruitdetection,
+    imageUrl: predictivemaintenance,
     link: "https://github.com/ankur-mali/Predictive-Maintenance-Using-AI-",
   },
   {
