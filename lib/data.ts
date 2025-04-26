@@ -2,7 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
+import fruitdetection from "@/public/fruitdetection.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
@@ -63,27 +63,32 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Vehicle Configurator Website",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "B2B car leasing portal using Jakarta EE, .NET, React & Spring Boot with Microservices and Docker.",
+    tags: ["Spring Boot", "React", "Node.js", "Docker", "MySQL"],
+    imageUrl: fruitdetection,
+    link: "https://github.com/ankur-mali/PG-DAC",
   },
   {
-    title: "rmtDev",
+    title: "Predictive Maintenance Dashboard",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "AeroEngine health monitoring using Streamlit and AI, built with CMAPSS dataset for RUL prediction.",
+    tags: ["Python", "Streamlit", "AI", "Random Forest", "CMAPSS"],
+    imageUrl: fruitdetection,
+    link: "https://github.com/ankur-mali/Predictive-Maintenance-Using-AI-",
   },
   {
-    title: "Word Analytics",
+    title: "Fruit Detection Robot",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Webots-based robot with OpenCV to detect and pick fruits using color segmentation and simulation.",
+    tags: ["Python", "OpenCV", "Webots", "Simulation", "Computer Vision"],
+    imageUrl: fruitdetection,
+    link: "https://github.com/ankur-mali/Fruit-Detection-Robot-with-OpenCV-and-Webots",
   },
 ] as const;
+
+
 
 export const skillsData = [
   "HTML",
