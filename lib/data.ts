@@ -63,20 +63,12 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Vehicle Configurator Website",
-    description:
-      "B2B car leasing portal using Jakarta EE, .NET, React & Spring Boot with Microservices and Docker.",
-    tags: ["Spring Boot", "React", "Node.js", "Docker", "MySQL"],
-    imageUrl: VCA,
-    link: "https://github.com/ankur-mali/PG-DAC",
-  },
-  {
     title: "Predictive Maintenance Dashboard",
     description:
       "AeroEngine health monitoring using Streamlit and AI, built with CMAPSS dataset for RUL prediction.",
     tags: ["Python", "Streamlit", "AI", "Random Forest", "CMAPSS"],
     imageUrl: predictivemaintenance,
-    link: "https://github.com/ankur-mali/Predictive-Maintenance-Using-AI-",
+    link: "https://areoengine.streamlit.app/",
   },
   {
     title: "Fruit Detection Robot",
@@ -85,6 +77,14 @@ export const projectsData = [
     tags: ["Python", "OpenCV", "Webots", "Simulation", "Computer Vision"],
     imageUrl: fruitdetection,
     link: "https://github.com/ankur-mali/Fruit-Detection-Robot-with-OpenCV-and-Webots",
+  },
+  {
+    title: "Vehicle Configurator Website",
+    description:
+      "B2B car leasing portal using Jakarta EE, .NET, React & Spring Boot with Microservices and Docker.",
+    tags: ["Spring Boot", "React", "Node.js", "Docker", "MySQL"],
+    imageUrl: VCA,
+    link: "https://github.com/ankur-mali/PG-DAC",
   },
 ] as const;
 
