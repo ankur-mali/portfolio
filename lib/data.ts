@@ -5,7 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import fruitdetection from "@/public/fruitdetection.png";
 import predictivemaintenance from "@/public/predictivemaintenance.png";
 import VCA from "@/public/VCA.png";
-
+import heimAtlas from "@/public/HeimAtlas.png";
 export const links = [
   {
     name: "Home",
@@ -62,6 +62,14 @@ export const experiencesData = [
 
 
 export const projectsData = [
+  {
+   title: "HeimAtlas",
+   description:
+    "A modern property listing platform where users can explore, add, and manage rental listings with real-time map integration.",
+   tags: ["Next.js", "Supabase", "Tailwind CSS", "Authentication"],
+   imageUrl: heimAtlas, // Replace with your actual image import
+   link: "https://heimatlas.lovable.app/", // Replace with your deployed site link
+  },
   {
     title: "Predictive Maintenance Dashboard",
     description:
