@@ -5,7 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import fruitdetection from "@/public/fruitdetection.png";
 import predictivemaintenance from "@/public/predictivemaintenance.png";
 import VCA from "@/public/VCA.png";
-import heimAtlas from "@/public/HeimAtlas.png";
+import bookllm from "@/public/bookllm.png";
 export const links = [
   {
     name: "Home",
@@ -63,12 +63,12 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-   title: "HeimAtlas",
-   description:
-    "A modern property listing platform where users can explore, add, and manage rental listings with real-time map integration.",
-   tags: ["Next.js", "Supabase", "Tailwind CSS", "Authentication"],
-   imageUrl: heimAtlas, // Replace with your actual image import
-   link: "https://heimatlas.lovable.app/", // Replace with your deployed site link
+    title: "Semantic Book Recommender",
+    description:
+      "An AI-powered book discovery app using LLMs, LangChain, and semantic search to match books with user emotions and natural language input.",
+    tags: ["HuggingFace", "OpenAI", "LangChain", "ChromaDB"],
+    imageUrl: bookllm, // Replace with your actual image import
+    link: "https://github.com/ankur-mali/llm-powered-semantic-book-recommender",
   },
   {
     title: "Predictive Maintenance Dashboard",
