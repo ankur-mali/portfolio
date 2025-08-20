@@ -19,34 +19,35 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After completing a postgraduate diploma in{" "}
-        <span className="font-medium">Advanced Computing</span>, I am pursuing a
-        master's degree in{" "}
-        <span className="font-medium">
-          Engineering Technology and Sustainable Technology Management
-        </span> in Germany, where I explored{" "}
-        <span className="font-medium">AI, data analytics, and full-stack software development</span>.
-        <span className="italic"> My favorite part of software development</span> is building
-        intelligent systems that solve real-world problems. I <span className="underline">enjoy</span> combining
-        clean architecture with smart algorithms. My core stack is{" "}
-        <span className="font-medium">
-          React, Next.js, .NET, Spring Boot, and SQL
-        </span>. I also have experience with{" "}
-        <span className="font-medium">Docker, REST APIs, and Microservices</span>,
-        and I’m passionate about integrating{" "}
-        <span className="font-medium">AI/ML</span> into scalable solutions. I’m currently
-        seeking a <span className="font-medium">working student or full-time position</span> in
-        software development or applied AI.
+        I am an <span className="font-medium">Applied AI Specialist</span> who
+        architects and builds intelligent systems from{" "}
+        <span className="font-medium">prototype to production</span>. My
+        expertise lies in translating{" "}
+        <span className="font-medium">complex data into actionable insights</span> 
+        and scalable software. I have hands-on experience engineering{" "}
+        <span className="font-medium">end-to-end ML solutions</span>, including{" "}
+        predictive analytics dashboards for industrial data and{" "}
+        sophisticated RAG-based chatbots for semantic search.
+      </p>
+
+      <p className="mb-3">
+        I leverage a powerful stack combining{" "}
+        <span className="font-medium">Python's data science ecosystem</span> with
+        robust backend frameworks like{" "}
+        <span className="font-medium">Spring Boot</span> and modern frontend
+        technologies such as <span className="font-medium">React</span> to create
+        impactful, data-driven applications. My passion lies in{" "}
+        <span className="italic">solving challenging problems</span> at the
+        intersection of <span className="font-medium">machine learning</span> and{" "}
+        <span className="font-medium">software engineering</span>.
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy exploring the
-        <span className="font-medium"> mountains</span>, traveling around Europe, and
-        learning new technologies in cloud platforms like{" "}
-        <span className="font-medium">Microsoft Azure and Google Cloud</span>. I am also
-        fascinated by topics like{" "}
-        <span className="font-medium">Industry 4.0, robotics, and digital twins</span>,
-        and often work on side projects involving AI-driven solutions.
+        I am currently seeking a{" "}
+        <span className="font-medium">role or opportunity</span> where I can
+        design and implement intelligent solutions that bridge{" "}
+        <span className="font-medium">AI research</span> with{" "}
+        <span className="font-medium">scalable production systems</span>.
       </p>
     </motion.section>
   );
