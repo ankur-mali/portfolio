@@ -9,7 +9,9 @@ export default function ThemeSwitch() {
 
   return (
     <button
-      className="fixed bottom-5 right-5 bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+      type="button"
+      aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+      className="glass fixed bottom-5 right-5 z-[998] grid h-12 w-12 place-items-center rounded-full transition hover:scale-[1.06] active:scale-[0.97] active:duration-75 focus-visible:ring-2 focus-visible:ring-wine-500"
       onClick={toggleTheme}
     >
       {theme === "light" ? <BsSun /> : <BsMoon />}

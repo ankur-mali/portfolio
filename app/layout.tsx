@@ -1,41 +1,47 @@
-import Header from "@/components/header";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import ActiveSectionContextProvider from "@/context/active-section-context";
-import Footer from "@/components/footer";
-import ThemeSwitch from "@/components/theme-switch";
+import type { Metadata, Viewport } from "next";
+import { Caveat, Fraunces } from "next/font/google";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 
-const inter = Inter({ subsets: ["latin"] });
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-display", axes: ["SOFT", "opsz"], style: ["normal", "italic"] });
+const caveat = Caveat({ subsets: ["latin"], variable: "--font-hand" });
 
-export const metadata = {
-  title: "Ankur | Personal Portfolio",
-  description: "Ankur is a full-stack developer with experties in AI.",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.ankurmali.com"),
+  title: "Ankur Mali · AI Engineer Associate",
+  description:
+    "Ankur Mali is an AI Engineer Associate at MULTIPLAI, building LLM, RAG and AI agent systems for enterprise. Walk through his journey in a cozy 3D town.",
+  openGraph: {
+    title: "Ankur Mali · AI Engineer Associate",
+    description: "LLMs, RAG pipelines and AI agents, from prototype to production. Explore the 3D portfolio town.",
+    url: "https://www.ankurmali.com",
+    type: "website",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f3ece0" },
+    { media: "(prefers-color-scheme: dark)", color: "#0e1222" },
+  ],
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="!scroll-smooth">
-      <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
-      >
-        <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
-        <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
-
+    <html lang="en" className={`${fraunces.variable} ${caveat.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Apply the saved theme before first paint (avoids a light flash at night). */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}`,
+          }}
+        />
+      </head>
+      <body className="bg-[#f3ece0] font-sans text-stone-900 antialiased dark:bg-[#0e1222] dark:text-stone-100">
         <ThemeContextProvider>
-          <ActiveSectionContextProvider>
-            <Header />
-            {children}
-            <Footer />
-
-            <Toaster position="top-right" />
-            <ThemeSwitch />
-          </ActiveSectionContextProvider>
+          {children}
+          <Toaster position="top-center" />
         </ThemeContextProvider>
       </body>
     </html>

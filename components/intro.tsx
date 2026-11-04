@@ -9,9 +9,10 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { profile, profilePhoto } from "@/lib/data";
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home", 0.5);
+  const { ref } = useSectionInView("Home");
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
@@ -31,10 +32,9 @@ export default function Intro() {
             }}
           >
             <Image
-              src="/profilepicture.jpg"
+              src={profilePhoto}
               alt="Ankur Mali"
-              width="192"
-              height="192"
+              sizes="96px"
               quality="95"
               priority={true}
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
@@ -58,19 +58,19 @@ export default function Intro() {
       </div>
 
       <motion.h1
-  className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-  initial={{ opacity: 0, y: 100 }}
-  animate={{ opacity: 1, y: 0 }}
->
-  <span className="font-bold">Hello, I'm Ankur.</span> I'm an{" "}
-  <span className="font-bold">AI Engineer</span> who enjoys building{" "}
-  <span className="underline">intelligent systems and AI agents</span>. I love using{" "}
-  <span className="font-bold">machine learning</span> to create{" "}
-  <span className="italic">practical solutions</span> that make an impact.
-</motion.h1>
+        className="mb-10 mt-4 px-4 text-2xl font-medium leading-[1.4] tracking-[-0.015em] [text-wrap:balance] sm:text-4xl sm:leading-[1.3] sm:tracking-[-0.02em]"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <span className="font-bold">Hello, I&apos;m Ankur.</span> I&apos;m an{" "}
+        <span className="font-bold">AI Engineer Associate</span> at{" "}
+        <span className="font-bold">MULTIPLAI</span>, building{" "}
+        <span className="underline decoration-wine-400 underline-offset-4">LLM, RAG and AI agent systems</span> that make it to{" "}
+        <span className="italic">production</span>.
+      </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-wrap items-center justify-center gap-2 px-4 text-base font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -79,7 +79,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group flex min-h-12 items-center gap-2 rounded-full bg-wine-600 px-6 text-wine-50 shadow-lg shadow-wine-900/20 outline-none transition hover:scale-[1.03] hover:bg-wine-700 active:scale-[0.97] active:duration-75 focus-visible:ring-2 focus-visible:ring-wine-500 focus-visible:ring-offset-2"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -90,8 +90,16 @@ export default function Intro() {
         </Link>
 
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="https://edp6uazmqn.ufs.sh/f/LCw8zqdg2uQ8KqICzL11OrJmHtX5uMw0Rs2dQUPlD9Fyj8zL"
+          className="group glass glass-flat flex min-h-12 items-center gap-2 rounded-full px-6 outline-none transition hover:scale-[1.03] active:scale-[0.97] active:duration-75 focus-visible:ring-2 focus-visible:ring-wine-500"
+          href="/"
+        >
+          Walk the 3D town{" "}
+          <BsArrowRight className="opacity-60 transition group-hover:translate-x-1" />
+        </a>
+
+        <a
+          className="group glass glass-flat flex min-h-12 items-center gap-2 rounded-full px-6 outline-none transition hover:scale-[1.03] active:scale-[0.97] active:duration-75 focus-visible:ring-2 focus-visible:ring-wine-500"
+          href={profile.cv}
           download
         >
           Download CV{" "}
@@ -99,21 +107,26 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/ankur-mali-/"
+          aria-label="LinkedIn"
+          rel="noreferrer"
+          className="glass glass-flat grid h-12 w-12 place-items-center rounded-full text-gray-700 transition hover:scale-[1.06] hover:text-gray-950 active:scale-[0.97] active:duration-75 focus-visible:ring-2 focus-visible:ring-wine-500 dark:text-white/70"
+          href={profile.linkedin}
           target="_blank"
         >
           <BsLinkedin />
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/ankur-mali"
+          aria-label="GitHub"
+          rel="noreferrer"
+          className="glass glass-flat grid h-12 w-12 place-items-center rounded-full text-[1.35rem] text-gray-700 transition hover:scale-[1.06] hover:text-gray-950 active:scale-[0.97] active:duration-75 focus-visible:ring-2 focus-visible:ring-wine-500 dark:text-white/70"
+          href={profile.github}
           target="_blank"
         >
           <FaGithubSquare />
         </a>
       </motion.div>
+
     </section>
   );
 }

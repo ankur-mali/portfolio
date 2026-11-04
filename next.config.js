@@ -1,26 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
-  },
-  experimental: {
-    serverActions: true,
-  },
-  async redirects() {
-    return [
-      {
-        source: '/(.*)',
-        has: [{ type: 'host', value: 'ankurmali.com' }],
-        permanent: true,
-        destination: 'https://ankurmali.com/:path*',
-      },
-    ];
-  },
+  // Ship three.js / R3F as ESM through Next's compiler.
+  transpilePackages: ["three"],
 };
 
 module.exports = nextConfig;
