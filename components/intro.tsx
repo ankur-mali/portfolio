@@ -97,14 +97,16 @@ export default function Intro() {
           <BsArrowRight className="opacity-60 transition group-hover:translate-x-1" />
         </a>
 
-        <a
-          className="group glass glass-flat flex min-h-12 items-center gap-2 rounded-full px-6 outline-none transition hover:scale-[1.03] active:scale-[0.97] active:duration-75 focus-visible:ring-2 focus-visible:ring-wine-500"
-          href={profile.cv}
-          download
-        >
-          Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
+        {profile.cv && (
+          <a
+            className="group glass glass-flat flex min-h-12 items-center gap-2 rounded-full px-6 outline-none transition hover:scale-[1.03] active:scale-[0.97] active:duration-75 focus-visible:ring-2 focus-visible:ring-wine-500"
+            href={profile.cv}
+            download
+          >
+            Download CV{" "}
+            <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          </a>
+        )}
 
         <a
           aria-label="LinkedIn"

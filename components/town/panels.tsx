@@ -137,9 +137,11 @@ function HeroActions() {
         </button>
       </div>
       <div className="flex items-center gap-2">
-        <a href={profile.cv} download className={btnLight}>
-          <HiDownload /> Download CV
-        </a>
+        {profile.cv && (
+          <a href={profile.cv} download className={btnLight}>
+            <HiDownload /> Download CV
+          </a>
+        )}
         <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className={iconBtn}>
           <BsLinkedin />
         </a>
@@ -279,9 +281,11 @@ function CampfireNote() {
 function ContactActions() {
   return (
     <>
-      <a href={profile.cv} download className={btnLight}>
-        <HiDownload /> CV
-      </a>
+      {profile.cv && (
+        <a href={profile.cv} download className={btnLight}>
+          <HiDownload /> CV
+        </a>
+      )}
       <a href={profile.linkedin} target="_blank" rel="noreferrer" className={btnLight}>
         <BsLinkedin /> LinkedIn
       </a>
@@ -380,7 +384,7 @@ export function StopPanel({ stop, active }: { stop: Stop; active: boolean }) {
             className={clsx(
               pad,
               "flex shrink-0 flex-wrap items-center gap-2 border-t border-stone-900/[0.06] py-4 dark:border-white/[0.06]",
-              // Phones: on the contact stop the letter gets the room; CV and Contact are in the top bar.
+              // Phones: on the contact stop the letter gets the room; Contact is in the top bar.
               stop.kind === "contact" && "max-sm:hidden",
             )}
           >

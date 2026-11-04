@@ -164,9 +164,11 @@ export function TopBar() {
 
       <div className="flex items-center gap-1.5 sm:gap-2">
         <Lanterns />
-        <a href={profile.cv} download className={clsx(pillBtn, "gap-1.5 px-3.5 text-sm font-semibold")}>
-          <HiDownload aria-hidden /> CV
-        </a>
+        {profile.cv && (
+          <a href={profile.cv} download className={clsx(pillBtn, "gap-1.5 px-3.5 text-sm font-semibold")}>
+            <HiDownload aria-hidden /> CV
+          </a>
+        )}
         <button type="button" onClick={() => scrollToStop(CONTACT_STOP)} className={clsx(pillBtn, "gap-1.5 px-3.5 text-sm font-semibold")}>
           <LuMail aria-hidden /> Contact
         </button>

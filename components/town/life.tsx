@@ -87,16 +87,17 @@ function Birds({ count }: { count: number }) {
     return Array.from({ length: count }, (_, i) => ({
       flock: i % 2,
       phase: r() * Math.PI * 2,
-      radius: 34 + r() * 22,
-      height: 17 + r() * 8,
+      // high and wide, so they read as distant flocks and never pass in front of a stop's camera
+      radius: 70 + r() * 30,
+      height: 52 + r() * 10,
       speed: 0.09 + r() * 0.03,
       flap: 7 + r() * 3,
       off: new THREE.Vector3((r() - 0.5) * 6, (r() - 0.5) * 3, (r() - 0.5) * 6),
     }));
   }, [count]);
   const wing = useMemo(() => {
-    const g = new THREE.PlaneGeometry(0.55, 0.2);
-    g.translate(0.275, 0, 0); // hinge at the body
+    const g = new THREE.PlaneGeometry(0.9, 0.3);
+    g.translate(0.45, 0, 0); // hinge at the body
     return g;
   }, []);
   const mat = useMemo(() => new THREE.MeshStandardMaterial({ color: "#3b3b45", side: THREE.DoubleSide, roughness: 1 }), []);

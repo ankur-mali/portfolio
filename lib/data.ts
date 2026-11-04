@@ -10,14 +10,17 @@ import profilePhoto from "@/public/profile.png";
 
 export { profilePhoto };
 
+// CV download: hidden everywhere while this is null. To bring the buttons back,
+// put the new file in /public (e.g. CV.pdf) and set this to "/CV.pdf".
+const CV_URL: string | null = null;
+
 export const profile = {
   name: "Ankur Mali",
   role: "AI Engineer Associate",
   company: "MULTIPLAI",
   linkedin: "https://www.linkedin.com/in/ankur-mali-/",
   github: "https://github.com/ankur-mali",
-  // Swap for the updated CV (or drop the new file into /public/CV.pdf).
-  cv: "/CV.pdf",
+  cv: CV_URL,
 } as const;
 
 // Classic view navigation.
